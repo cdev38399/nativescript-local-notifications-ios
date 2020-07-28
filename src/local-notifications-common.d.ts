@@ -39,7 +39,7 @@ export interface ScheduleOptions {
 }
 export interface ReceivedNotification {
     id: number;
-    id_str: string;
+    id_str:string;
     foreground: boolean;
     title?: string;
     body?: string;
