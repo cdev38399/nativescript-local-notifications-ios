@@ -300,6 +300,8 @@ export abstract class LocalNotificationsCommon {
 
     if (typeof id === "number") {
       return id;
+    } else if(typeof id === "string") {
+      return id;
     } else {
       // We need unique IDs in all notifications to be able to persist them without overwriting one another:
       return opts.id = LocalNotificationsCommon.generateNotificationID();
