@@ -1,7 +1,7 @@
 .idea/
 .vscode/
-native-src/
+#native-src/
 #*.ts
-!*.d.ts
+#!*.d.ts
 tsconfig.json
 references.d.ts
