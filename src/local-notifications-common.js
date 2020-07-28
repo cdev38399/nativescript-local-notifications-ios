@@ -33,9 +33,6 @@ var LocalNotificationsCommon = (function () {
         if (typeof id === "number") {
             return id;
         }
-        else if (typeof id === "string") {
-            return id;
-        }
         else {
             return opts.id = LocalNotificationsCommon.generateNotificationID();
         }
