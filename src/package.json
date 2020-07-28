@@ -48,8 +48,7 @@
     "name": "CDEV38399",
     "url": "https://github.com/cdev38399/"
   },
-  "contributors": [
-  ],
+  "contributors": [],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cdev38399/nativescript-local-notifications-ios/issues"
