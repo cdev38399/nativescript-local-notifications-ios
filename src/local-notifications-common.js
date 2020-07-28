@@ -33,7 +33,7 @@ var LocalNotificationsCommon = (function () {
         if (typeof id === "number") {
             return id;
         }
-        else if(typeof id === "string"){
+        else if (typeof id === "string") {
             return id;
         }
         else {
