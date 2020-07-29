@@ -4,6 +4,7 @@ export type ScheduleInterval = "second" | "minute" | "hour" | "day" | "week" | "
 
 export interface NotificationAction {
   id: string;
+  id_str?: string;
   type: "button" | "input";
   title?: string;
   /**
@@ -188,6 +189,7 @@ export interface ScheduleOptions {
 
 export interface ReceivedNotification {
   id: number;
+  id_str?: string;
   foreground: boolean;
   title?: string;
   body?: string;
