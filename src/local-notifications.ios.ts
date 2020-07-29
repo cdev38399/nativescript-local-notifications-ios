@@ -135,7 +135,7 @@ export class LocalNotificationsImpl extends LocalNotificationsCommon implements 
       userInfoDict.setObjectForKey("nativescript-local-notifications", "__NotificationType");
       userInfoDict.setObjectForKey(options.forceShowWhenInForeground, "forceShowWhenInForeground");
       userInfoDict.setObjectForKey(options.priority || 0, "priority");
-      userInfoDict.setObjectForKey(options.id_str, options.id_str);
+      userInfoDict.setObjectForKey("id_str", options.id_str);
       content.userInfo = userInfoDict;
 
       // Notification trigger and repeat

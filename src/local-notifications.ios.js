@@ -127,7 +127,7 @@ var LocalNotificationsImpl = (function (_super) {
             userInfoDict.setObjectForKey("nativescript-local-notifications", "__NotificationType");
             userInfoDict.setObjectForKey(options.forceShowWhenInForeground, "forceShowWhenInForeground");
             userInfoDict.setObjectForKey(options.priority || 0, "priority");
-            userInfoDict.setObjectForKey(options.id_str, "id_str");
+            userInfoDict.setObjectForKey("id_str", options.id_str);
             content.userInfo = userInfoDict;
             var trigger;
             if (options.at) {

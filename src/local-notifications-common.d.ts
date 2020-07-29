@@ -14,6 +14,7 @@ export interface NotificationAction {
 export interface ScheduleOptions {
     id?: number;
     title?: string;
+    id_str?: string;
     subtitle?: string;
     body?: string;
     ticker?: string;
