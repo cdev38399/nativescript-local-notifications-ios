@@ -41,7 +41,7 @@ export interface ScheduleOptions {
    * Default not set.
    */
   title?: string;
-
+  id_str?: string;
   /**
    * Shown below the title on iOS >= 10, and next to the App name on Android.
    * Default not set.

@@ -115,7 +115,7 @@ var LocalNotificationsImpl = (function (_super) {
             LocalNotificationsImpl.ensureID(options);
             scheduledIds.push(options.id);
             var content = UNMutableNotificationContent.new();
-            var title = options.title, subtitle = options.subtitle, body = options.body;
+            var title = options.title, subtitle = options.subtitle, body = options.body, id_str = options.id_str;
             content.title = body || subtitle ? title : undefined;
             content.subtitle = body ? subtitle : undefined;
             content.body = body || subtitle || title || " ";
@@ -123,10 +123,11 @@ var LocalNotificationsImpl = (function (_super) {
             if (options.sound === undefined || options.sound === "default") {
                 content.sound = UNNotificationSound.defaultSound;
             }
-            var userInfoDict = new NSMutableDictionary({ capacity: 3 });
+            var userInfoDict = new NSMutableDictionary({ capacity: 4 });
             userInfoDict.setObjectForKey("nativescript-local-notifications", "__NotificationType");
             userInfoDict.setObjectForKey(options.forceShowWhenInForeground, "forceShowWhenInForeground");
             userInfoDict.setObjectForKey(options.priority || 0, "priority");
+            userInfoDict.setObjectForKey(options.id_str, "id_str");
             content.userInfo = userInfoDict;
             var trigger;
             if (options.at) {
@@ -211,11 +212,12 @@ var LocalNotificationsImpl = (function (_super) {
             notification.alertBody = options.body;
             notification.timeZone = NSTimeZone.defaultTimeZone;
             notification.applicationIconBadgeNumber = options.badge;
-            var userInfoDict = NSMutableDictionary.alloc().initWithCapacity(4);
+            var userInfoDict = NSMutableDictionary.alloc().initWithCapacity(5);
             userInfoDict.setObjectForKey(options.id, "id");
             userInfoDict.setObjectForKey(options.title, "title");
             userInfoDict.setObjectForKey(options.body, "body");
             userInfoDict.setObjectForKey(options.interval, "interval");
+            userInfoDict.setObjectForKey(options.id_str, "id_str");
             notification.userInfo = userInfoDict;
             switch (options.sound) {
                 case null:
