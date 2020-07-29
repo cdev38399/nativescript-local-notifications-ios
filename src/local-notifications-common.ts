@@ -36,7 +36,6 @@ export interface ScheduleOptions {
    * Default <generated>.
    */
   id?: number;
-
   /**
    * The title which is shown in the statusbar.
    * Default not set.

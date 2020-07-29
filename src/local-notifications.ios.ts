@@ -496,7 +496,6 @@ class LocalNotificationsDelegateObserverImpl implements DelegateObserver {
 
     this._owner.get().addOrProcessNotification({
       id: +request.identifier,
-      id_str: "any",
       title: notificationContent.title,
       body: notificationContent.body,
       foreground: this.receivedInForeground || UIApplication.sharedApplication.applicationState === UIApplicationState.Active,
