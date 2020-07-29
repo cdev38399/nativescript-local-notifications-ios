@@ -13,8 +13,8 @@ export interface NotificationAction {
 }
 export interface ScheduleOptions {
     id?: number;
-    title?: string;
     id_str?: string;
+    title?: string;
     subtitle?: string;
     body?: string;
     ticker?: string;

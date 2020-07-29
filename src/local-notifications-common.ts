@@ -36,12 +36,12 @@ export interface ScheduleOptions {
    * Default <generated>.
    */
   id?: number;
+  id_str?: string;
   /**
    * The title which is shown in the statusbar.
    * Default not set.
    */
   title?: string;
-  id_str?: string;
   /**
    * Shown below the title on iOS >= 10, and next to the App name on Android.
    * Default not set.

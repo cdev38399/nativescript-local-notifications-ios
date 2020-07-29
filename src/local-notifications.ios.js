@@ -423,7 +423,7 @@ var LocalNotificationsDelegateObserverImpl = (function () {
         }
         this._owner.get().addOrProcessNotification({
             id: +request.identifier,
-            id_str: notificationResponse.notification.request.content.userInfo.valueForKey("id_str"),
+            id_str: notificationContent.userInfo.valueForKey("id_str"),
             title: notificationContent.title,
             body: notificationContent.body,
             foreground: this.receivedInForeground || UIApplication.sharedApplication.applicationState === 0,
