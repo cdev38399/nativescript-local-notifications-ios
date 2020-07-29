@@ -115,7 +115,7 @@ var LocalNotificationsImpl = (function (_super) {
             LocalNotificationsImpl.ensureID(options);
             scheduledIds.push(options.id);
             var content = UNMutableNotificationContent.new();
-            var title = options.title, subtitle = options.subtitle, body = options.body, id_str = options.id_str;
+            var title = options.title, subtitle = options.subtitle, body = options.body;
             content.title = body || subtitle ? title : undefined;
             content.subtitle = body ? subtitle : undefined;
             content.body = body || subtitle || title || " ";
@@ -127,7 +127,7 @@ var LocalNotificationsImpl = (function (_super) {
             userInfoDict.setObjectForKey("nativescript-local-notifications", "__NotificationType");
             userInfoDict.setObjectForKey(options.forceShowWhenInForeground, "forceShowWhenInForeground");
             userInfoDict.setObjectForKey(options.priority || 0, "priority");
-            userInfoDict.setObjectForKey("id_str", options.id_str);
+            userInfoDict.setObjectForKey(options.id_str, "id_str");
             content.userInfo = userInfoDict;
             var trigger;
             if (options.at) {

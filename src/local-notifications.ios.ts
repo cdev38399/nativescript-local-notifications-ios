@@ -118,7 +118,7 @@ export class LocalNotificationsImpl extends LocalNotificationsCommon implements 
       // Notification content
       const content = UNMutableNotificationContent.new();
 
-      const {title, subtitle, body, id_str} = options;
+      const {title, subtitle, body} = options;
       content.title = body || subtitle ? title : undefined;
       content.subtitle = body ? subtitle : undefined;
       // On iOS, a notification with no body won't show up, so the subtitle or title will be used in this case as body
@@ -135,7 +135,7 @@ export class LocalNotificationsImpl extends LocalNotificationsCommon implements 
       userInfoDict.setObjectForKey("nativescript-local-notifications", "__NotificationType");
       userInfoDict.setObjectForKey(options.forceShowWhenInForeground, "forceShowWhenInForeground");
       userInfoDict.setObjectForKey(options.priority || 0, "priority");
-      userInfoDict.setObjectForKey("id_str", options.id_str);
+      userInfoDict.setObjectForKey(options.id_str, "id_str");
       content.userInfo = userInfoDict;
 
       // Notification trigger and repeat
